@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-04-17T19:10:21.332157",
+  "summary": {
+    "total_threats": 5,
+    "threat_types": {
+      "brute_force": 1,
+      "scanning": 1,
+      "blacklisted": 2,
+      "path_traversal": 1
+    }
+  },
+  "threats": [
+    {
+      "type": "Brute-Force Attack",
+      "severity": "HIGH",
+      "ip": "203.0.113.0",
+      "details": "9 failed login attempts",
+      "usernames": [
+        "administrator",
+        "admin",
+        "test",
+        "root"
+      ],
+      "first_seen": "Apr 18 10:15:23",
+      "last_seen": "Apr 18 10:15:41"
+    },
+    {
+      "type": "Port/Path Scanning",
+      "severity": "MEDIUM",
+      "ip": "192.0.2.0",
+      "details": "Accessed 54 different paths",
+      "sample_paths": [
+        "/page20",
+        "/page8",
+        "/page35",
+        "/page19",
+        "/page41",
+        "/page40",
+        "/page11",
+        "/page34",
+        "/page4",
+        "/page12"
+      ]
+    },
+    {
+      "type": "Blacklisted IP",
+      "severity": "HIGH",
+      "ip": "192.0.2.0",
+      "details": "IP found in threat intelligence blacklist"
+    },
+    {
+      "type": "Blacklisted IP",
+      "severity": "HIGH",
+      "ip": "203.0.113.0",
+      "details": "IP found in threat intelligence blacklist"
+    },
+    {
+      "type": "Path Traversal Attempt",
+      "severity": "HIGH",
+      "ip": "192.0.2.0",
+      "details": "Suspicious pattern in: /../../etc/passwd"
+    }
+  ]
+}
